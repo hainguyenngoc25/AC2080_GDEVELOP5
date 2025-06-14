@@ -9001,7 +9001,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.459852142673638,
+        "zoomFactor": 0.4448515998886698,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -9015,6 +9015,11 @@
           "name": "Var_Time2",
           "type": "number",
           "value": 30
+        },
+        {
+          "name": "emiu",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -10823,12 +10828,14 @@
           "height": 687,
           "keepRatio": true,
           "layer": "",
+          "locked": true,
           "name": "Bảng_cài_đặt",
           "persistentUuid": "a428f86f-0388-46a1-b7a1-de2035998fa4",
+          "sealed": true,
           "width": 1008,
-          "x": 447,
-          "y": 147,
-          "zOrder": 103,
+          "x": 453,
+          "y": 142,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -10912,6 +10919,114 @@
           "x": 793,
           "y": 596,
           "zOrder": 109,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 97,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cpoint",
+          "opacity": 0,
+          "persistentUuid": "4321ef6d-f1f0-4482-8867-b1eaa1237d60",
+          "width": 133,
+          "x": 576,
+          "y": 90,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 19,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cpoint",
+          "opacity": 0,
+          "persistentUuid": "7762cc1f-fd7e-4d47-81bb-816ac499654b",
+          "width": 167,
+          "x": 1194,
+          "y": 720,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 41,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cpoint",
+          "opacity": 0,
+          "persistentUuid": "952b3c51-1593-40a3-a66d-059dbf60ae66",
+          "width": 167,
+          "x": 889,
+          "y": 130,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 41,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cpoint",
+          "opacity": 0,
+          "persistentUuid": "52a2e861-1012-45e9-a941-9deebb20a6eb",
+          "width": 167,
+          "x": 1216,
+          "y": 121,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 27,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cpoint",
+          "opacity": 0,
+          "persistentUuid": "fc2f9f9d-ca05-40dc-900a-cf8b29ba608a",
+          "width": 167,
+          "x": 526,
+          "y": 714,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 25,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cpoint",
+          "opacity": 0,
+          "persistentUuid": "15cd2bd2-2706-4896-91d3-32cc97d98686",
+          "width": 167,
+          "x": 856,
+          "y": 721,
+          "zOrder": 110,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -14359,7 +14474,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Người chơi di chuyển",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14614,7 +14728,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Đọc hướng dẫn",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14643,7 +14756,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -14657,6 +14769,16 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "emiu",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -14668,35 +14790,63 @@
                     "Emiu",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "emiu",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Soldier4",
+                    "Giá_sách",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "emiu",
+                    "True",
+                    ""
+                  ]
                 }
               ],
-              "events": [
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Soldier4",
-                        "Giá_sách",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Emiu"
-                      ]
-                    }
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Emiu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "emiu",
+                    "False",
+                    ""
                   ]
                 }
               ]
@@ -14711,6 +14861,16 @@
                   "parameters": [
                     "",
                     "\"e\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "emiu",
+                    "True",
+                    ""
                   ]
                 }
               ],
@@ -15846,13 +16006,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Tính năng cài đặt",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -15987,7 +16145,15 @@
                         "value": "Cache"
                       },
                       "parameters": [
-                        "cài_đặt"
+                        "Cài_đặt"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "Bảng_cài_đặt"
                       ]
                     },
                     {
@@ -16276,168 +16442,168 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "Quay_lại2",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Bảng_cài_đặt"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SoundSlider"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "MusicSlider2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Sound"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Music"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Quay_lại2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+                  },
+                  "parameters": [
+                    "MusicSlider2",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Setting.Music",
+                    "=",
+                    "MusicSlider2.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "GlobalVolume",
+                    "=",
+                    "MusicSlider2.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "0",
+                    "=",
+                    "GlobalVariable(GlobalVolume)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+                  },
+                  "parameters": [
+                    "SoundSlider",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Setting.Sound",
+                    "=",
+                    "SoundSlider.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "GlobalVolume2",
+                    "=",
+                    "SoundSlider.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "GlobalVariable(GlobalVolume2) "
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
-              },
-              "parameters": [
-                "Quay_lại2",
-                "ButtonFSM",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "Bảng_cài_đặt"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "SoundSlider"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "MusicSlider2"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "Sound"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "Music"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "Quay_lại2"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
-              },
-              "parameters": [
-                "MusicSlider2",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "Setting.Music",
-                "=",
-                "MusicSlider2.Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "GlobalVolume",
-                "=",
-                "MusicSlider2.Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVolumeMusicCanal"
-              },
-              "parameters": [
-                "",
-                "0",
-                "=",
-                "GlobalVariable(GlobalVolume)"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
-              },
-              "parameters": [
-                "SoundSlider",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "Setting.Sound",
-                "=",
-                "SoundSlider.Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "GlobalVolume2",
-                "=",
-                "SoundSlider.Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVolumeSoundCanal"
-              },
-              "parameters": [
-                "",
-                "1",
-                "=",
-                "GlobalVariable(GlobalVolume2) "
-              ]
-            }
-          ]
         }
       ],
       "layers": [
@@ -25126,6 +25292,32 @@
               },
               "parameters": [
                 "Video"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"6.Huongdan\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"f\""
               ]
             }
           ],
