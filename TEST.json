@@ -5285,6 +5285,16 @@
       "name": "GlobalVolume2",
       "type": "number",
       "value": 50
+    },
+    {
+      "name": "loot_no",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "loot_nomax",
+      "type": "number",
+      "value": 15
     }
   ],
   "layouts": [
@@ -9001,10 +9011,31 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4448515998886698,
+        "zoomFactor": 0.30887412163426853,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "items",
+          "objects": [
+            {
+              "name": "Mìn_chống_tăng"
+            },
+            {
+              "name": "Coke"
+            },
+            {
+              "name": "Mìn"
+            },
+            {
+              "name": "Bẫy_chông"
+            },
+            {
+              "name": "bẫy_kẹp_chông"
+            }
+          ]
+        }
+      ],
       "variables": [
         {
           "name": "Var_Time",
@@ -13841,6 +13872,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "MAX_LOOT",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "KHÔNG THỂ LOOT",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 50,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "KHÔNG THỂ LOOT",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 50,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -14002,6 +14075,9 @@
           },
           {
             "objectName": "Quay_lại2"
+          },
+          {
+            "objectName": "MAX_LOOT"
           }
         ]
       },
@@ -15203,6 +15279,94 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Soldier4",
+                    "items",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "loot_no",
+                    "<=",
+                    "15"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loot_no",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Soldier4",
+                    "items",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "loot_no",
+                    ">",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loot",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loot",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -19492,6 +19656,96 @@
           "x": 262,
           "y": 530,
           "zOrder": 78,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 67,
+          "keepRatio": true,
+          "layer": "",
+          "name": "obstacle",
+          "opacity": 0,
+          "persistentUuid": "a59da563-2066-4867-9300-cd6e600a9089",
+          "width": 221,
+          "x": 359,
+          "y": 297,
+          "zOrder": 71,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 67,
+          "keepRatio": true,
+          "layer": "",
+          "name": "obstacle",
+          "opacity": 0,
+          "persistentUuid": "11df6e11-4bf9-4441-a5c8-cfc4a15ee4ec",
+          "width": 1927,
+          "x": -4,
+          "y": -70,
+          "zOrder": 71,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1214,
+          "keepRatio": true,
+          "layer": "",
+          "name": "obstacle",
+          "opacity": 0,
+          "persistentUuid": "b6691b14-4879-448d-9d86-5d28466dff85",
+          "width": 73,
+          "x": 1918,
+          "y": -69,
+          "zOrder": 71,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 67,
+          "keepRatio": true,
+          "layer": "",
+          "name": "obstacle",
+          "opacity": 0,
+          "persistentUuid": "d9ce7078-22ae-43f6-88bf-126013142555",
+          "width": 1927,
+          "x": -8,
+          "y": 1082,
+          "zOrder": 71,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1214,
+          "keepRatio": true,
+          "layer": "",
+          "name": "obstacle",
+          "opacity": 0,
+          "persistentUuid": "6ff922a8-e1c5-41d1-a7c9-e518eb562c09",
+          "width": 73,
+          "x": -73,
+          "y": -64,
+          "zOrder": 71,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
