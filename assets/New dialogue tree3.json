@@ -1,0 +1,22 @@
+[
+	{
+		"title": "DDCC",
+		"tags": "",
+		"body": "Rất tốt! Tuy nhiên, chiến trường không khoan nhượng. Trước khi xuất trận, cậu cần nắm rõ cách giành chiến thắng..\r\nNhấn các nút [b]LEFT RIGHT[/b] để di chuyển khẩu pháo, [b]SPACE[/b] để khai hỏa.\r\nChỉ cần tiêu diệt được 8% số lượng máy bay là cậu có thể giành chiến thắng.\r\nLưu ý đừng để những trái bom của địch rơi trúng, cậu không có nhiều cơ hội đâu.\r\nNhấn [b]SPACE[/b] để tiếp tục",
+		"position": {
+			"x": 436,
+			"y": 251
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Chap7",
+		"tags": "",
+		"body": "Rất tốt! Đồng chí đã góp phần cho cuộc chiến Cedar Falls trở nên thắng lợi\nCuộc hành quân Cedar Falls kết thúc ngày 26/01/1967, với 28 máy bay các loại bị bắn rơi và bị thương.\nTrước khi bước vào nhiệm vụ cuối cùng, tôi có 1 vài căn dặn với cậu.\nSử dụng [b]4 phím điều hướng[/b] để điều khiển xe tăng tiến tới.\nChúc đồng chí may mắn, thắng lợi đang đến rất gần rồi!\nNhấn [b]SPACE [/b]để tiếp tục",
+		"position": {
+			"x": 117,
+			"y": 46
+		},
+		"colorID": 0
+	}
+]

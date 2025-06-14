@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "Cậu được triệu tập gấp vì nhiệm vụ tối mật – chế tạo và đặt bom phá hủy tuyến tiếp tế của địch.\r\n\r\nCháu sẵn sàng! Cháu cần bắt đầu từ đâu?\r\n\r\nVào kho lấy vật liệu, rồi ra bàn chế tạo bom. Xong thì lên đường!\r\n\r\nRõ! Cháu sẽ không để Tổ quốc thất vọng!\r\n\r\nNhấn SPACE để bắt đầu",
+		"position": {
+			"x": 334,
+			"y": 204
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Begin",
+		"tags": "",
+		"body": "Hướng dẫn\r\nDi chuyển theo hướng mũi tên\r\nNhấn \"E\" để đọc sách\r\nSử dụng 4 phím điều hướng để bắt đầu di chuyển    \r\nNhấn phím bất kì để tiếp tục",
+		"position": {
+			"x": -20,
+			"y": 18
+		},
+		"colorID": 0
+	}
+]
