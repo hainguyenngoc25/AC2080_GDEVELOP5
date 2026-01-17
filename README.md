@@ -1,5 +1,5 @@
 # AC2080 - Trò chơi số và tương tác 1 (HUST)
-Sản phẩm báo cáo cuối kì học phần Trò chơi số và tương tác I (AC2080), Đại học Bách khoa Hà Nội
+Sản phẩm báo cáo cuối kì học phần Trò chơi số và tương tác I (AC2080) học kì 2024.2, Đại học Bách khoa Hà Nội
 
 ## Đề tài
 Thiết kế trò chơi lịch sử Việt Nam
